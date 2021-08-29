@@ -1,6 +1,6 @@
 # Passive DNS Demo
 
-This repository holds the Passive DNS frontend.
+This repository holds the Passive DNS frontend built (see the [docs branch](https://github.com/PassiveDNS/PassiveDNS.github.io/tree/docs)).
 
 It is deployed using the Github Pages: https://passivedns.github.io/
 
