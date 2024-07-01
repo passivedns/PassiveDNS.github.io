@@ -7,8 +7,9 @@ sidebar:
   open: true
 ---
 
-This page explains how to run the app
+The installation section helps you get started to use the app with the production environment, or to enhance it using the development section. 
 
-## For production environment
-
-## For development environment
+{{< cards >}}
+    {{< card link="/docs/installation/production" title="Production">}}
+    {{< card link="/docs/installation/development" title="Development">}}
+{{< /cards >}}
