@@ -1,18 +1,8 @@
 ---
 title: Documentation
-next: first-page
+weight: 1
+next: docs/getting-started/
 ---
 
 This is the PassiveDNS webapp documentation.
 
-## Hello, World!
-
-```go {filename="main.go"}
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, World!")
-}
-```
