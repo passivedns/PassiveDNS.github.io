@@ -1,7 +1,8 @@
 ---
 title: Scheduler
-prev: docs/user-guide/administrator
-next: docs/user-guide/user
+weight: 2
+prev: docs/user-guide/user
+next: docs/user-guide/administrator
 ---
 
 ## How to use

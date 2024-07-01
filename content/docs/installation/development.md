@@ -51,8 +51,9 @@ Then, in the `/pdns-docker/dev/` :
 
 ```bash
 cd PassiveDNS
-git checkout -b <branch-name>
+git checkout -b [BRANCH-NAME]
 ```
+Replacing `[BRANCH-NAME]` with the name of the branch you are currently working on.
 
 ## Run the application
 
@@ -87,7 +88,7 @@ You can use [Docker Desktop](https://www.docker.com/products/docker-desktop/) to
     ```
     Then inside the shell:
     ```bash
-    poetry run uvicorn passiveDNS.webserver:app --reload --host 0.0.0.0 --port 8080
+    poetry run uvicorn passiveDNS.webserver:app --reload --host 0.0.0.0 --port 8080 --log-level debug
     ```
 
     **FrontEnd**: open a shell inside the front container:

@@ -2,9 +2,13 @@
 title: User guide
 weight: 3
 prev: docs/installation/production
-next: docs/user-guide/administrator
+next: docs/user-guide/user
 ---
 
-How to use the app
+This section contains everything you need to know to use the PassiveDNS app. 
 
-## Basic usage
+{{< cards >}}
+    {{< card link="/docs/user-guide/user" title="User">}}
+    {{< card link="/docs/user-guide/scheduler" title="Scheduler">}}
+    {{< card link="/docs/user-guide/administrator" title="Administrator">}}
+{{< /cards >}}
