@@ -5,10 +5,15 @@ prev: docs/installation/production
 next: docs/user-guide/
 ---
 
-This page explains how to run the app in development environment
+This page explains how to run the app in development environment.
+
+## Requirements
+
+In order to properly run the application, you need at least the following installed:
+- Git
+- Docker
 
 ## Installation
-
 
 Start of by downloading or cloning the [pdns-docker](https://github.com/passivedns/pdns-docker/) repository
 
@@ -71,13 +76,11 @@ You can use [Docker Desktop](https://www.docker.com/products/docker-desktop/) to
     {{< tab >}}
     **Web Server**: open the api container, then into the `Exec` tab:
     ```bash
-    bash
-    poetry run uvicorn passiveDNS.webserver:app --reload --host 0.0.0.0 --port 8080
+    poetry run uvicorn passiveDNS.webserver:app --reload --host 0.0.0.0 --port 8080 --log-level debug
     ```
 
     **FrontEnd**: open the front container, then into the `Exec` tab:
     ```bash
-    bash
     npm install && npm run dev
     ```
     {{< /tab >}}
@@ -102,6 +105,10 @@ You can use [Docker Desktop](https://www.docker.com/products/docker-desktop/) to
     {{< /tab >}}
 
 {{< /tabs >}}
+
+{{< callout type="info" >}}
+  The `npm install` command only needs to be used once at start, later on you can simply use `npm run dev`.
+{{< /callout >}}
 
 ## Create an admin user
 
