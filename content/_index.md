@@ -3,6 +3,8 @@ title: PassiveDNS Documentation
 toc: false
 ---
 
+Welcome to the PassiveDNS documentation! Here you can find information about how to run the application, or how it is structured. 
+
 ## Explore
 
 {{< cards >}}
