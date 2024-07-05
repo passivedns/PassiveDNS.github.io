@@ -109,7 +109,7 @@ Note : The data returned should be a list with this format after passing through
         "first_updated_at": ,
         "last_updated_at": ,
     },
-    ...
+    "..."
 ]
 ```
 {{< /callout>}}
