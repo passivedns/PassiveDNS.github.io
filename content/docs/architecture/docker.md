@@ -1,7 +1,8 @@
 ---
 title: Docker containers
+weight: 1
 prev: docs/architecture/database
-next: docs/
+next: docs/architecture/ci_cd
 ---
 
 This application is divided into docker containers. Theses containers are used to build images for the production environment.
@@ -50,4 +51,16 @@ For more details on the structure of the database, please visit the [database](/
 
 ## Scheduler
 
+The scheduler is run on an external container so that it is independant and can be run from other places for instance.
+It relies on Redis which is run automatically with it.
+
+The scheduler is programmed to resolve every domain name once a day, check if there have been any changes and notify people using the channels if so. 
+
+### Dependencies
+
+- python 3.12
+- celery
+
 ## Redis
+
+Redis is used only by the scheduler, and is linked to it. For more information about Redis, visit their [website](https://redis.io/).

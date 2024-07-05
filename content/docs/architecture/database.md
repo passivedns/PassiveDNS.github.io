@@ -1,5 +1,6 @@
 ---
 title: Database
+weight: 1
 prev: docs/architecture/
 next: docs/architecture/docker
 ---
