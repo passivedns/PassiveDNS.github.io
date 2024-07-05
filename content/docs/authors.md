@@ -9,7 +9,7 @@ This project was made in 2021 by students from EPITA school :
 - Mah Aminata Ndiaye Mah-Aminata.Ndiaye@epita.fr
 - Clotilde Saint-Denis Clotilde.saint-denis@epita.fr
 
-And updated by a student from ESIEA school :
+And updated by a student from ESIEA school in 2024 :
 
 - Anna Oquidam oquidam@et.esiea.fr
 
