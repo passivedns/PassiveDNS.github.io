@@ -44,14 +44,17 @@ When an alert is created, all of the subscribed users recieve it from the select
 
 ## Channels
 
-Channels are used to send alerts, either by email or using a Redis pub/sub channel. 
-A user can see all of the channels that are available and subscribe to them, by giving an email address. 
-They can then verify their email, and once that is done, they will recieve the new alerts.
-
-[Redis](https://redis.io/docs/latest/develop/interact/pubsub/) channels do not have a setup button, as they do not need it. Please contact your administrator if you want to know how to get the alerts from there.
+Channels are used to send alerts using a [Redis](https://redis.io/docs/latest/develop/interact/pubsub/) pub/sub channel. 
+A user can see all of the channels that are available and subscribe to them via redis directly. 
+To subscribe, the user needs to connect to redis (using `redis-cli`), and start listening to the channel using :
+```
+subscribe [CHANNEL_NAME]
+```
+Replacing `[CHANNEL_NAME]` by the name displayed on the app.
+Please contact your administrator if you want to know how to get the alerts from there.
 
 {{< callout type="info" >}}
-  Please note that the `_default` channel is an email channel, and needs to be manually set up by the administrator in order to be used.
+  Please note that the `_default` channel is not setup initially, and needs to be manually set up by the administrator in order to be used.
 {{< /callout >}}
 
 ## Extern Apis

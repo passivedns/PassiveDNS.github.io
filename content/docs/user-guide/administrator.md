@@ -27,16 +27,17 @@ The users page allows the administrator to:
 - Remove existing users,
 - Create or edit a scheduler,
 - Send an invitation for a new user,
-- Manage requests from users. 
+- Manage requests from users.
 
-## Create a new administrator
+## Create a new administrator or user
 
-If there is a need for multiple administrators, a new administrator can be created using the shell inside the API container (see the [production installation](../../installation/production) for more details) using the following command:
+If there is a need for multiple administrators, a new administrator can be created using the shell inside the API container (see the [production installation](../../installation/production/#create-an-admin-user) for more details) using the following command:
 
 ```bash
 ../docker-entrypoint.sh create-user [USERNAME] [PASSWORD] [EMAIL] --admin
 ```
 Replacing `[USERNAME]`, `[PASSWORD]` and `[EMAIL]` with the corresponding data.
+Removing the `--admin` option will create a simple user.
 
 ## Add a new extern API
 

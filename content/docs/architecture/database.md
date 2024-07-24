@@ -50,8 +50,26 @@ It is initialized when creating an admin user when the app is started for the fi
 ```json
 {
     "_key": "name",
-    "type": "email|redis",
-    "infos": {"..."},
+    "type": "redis",
+    "infos": {
+        "host": "str",
+        "port": "str",
+        "db": "str"
+    },
+}
+
+```
+OR
+```json
+{
+    "_key": "name",
+    "type": "email",
+    "infos": {
+        "smtp_host": "str",
+        "smtp_port": "str",
+        "sender_email": "str",
+        "sender_password": "str"
+    },
 }
 
 ```
@@ -129,21 +147,6 @@ It is initialized when creating an admin user when the app is started for the fi
 ```
 
 ### Edges
-
-#### UserChannel
-
-```json
-{
-    "_from": "Users/username",
-    "_to": "Channel/name",
-    "username": "str",
-    "channel_name": "str",
-    "contact": "str",
-    "verified": "str",
-    "token": "str",
-}
-
-```
 
 #### UserDn
 

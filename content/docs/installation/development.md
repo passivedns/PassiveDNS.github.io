@@ -62,7 +62,9 @@ Replacing `[BRANCH-NAME]` with the name of the branch you are currently working 
 
 ## Run the application
 
+Go back to the `/pdns-docker/dev/` folder, and run the app:
 ```bash
+cd ..
 docker compose up
 ```
 
@@ -121,4 +123,4 @@ Either by Docker Desktop or by CLI, in a shell of the API container (separate fr
 
 ```
 
-Replacing `[USERNAME]`, `[PASSWORD]` and `[EMAIL]` with the corresponding data.
+Replacing `[USERNAME]`, `[PASSWORD]` and `[EMAIL]` with the corresponding data (note : not using the `--admin` option will create a simple user).

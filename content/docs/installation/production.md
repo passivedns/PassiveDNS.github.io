@@ -61,6 +61,24 @@ docker compose up
 ```
 
 This should start all of the containers. 
+If you are on MacOS and encounter any problem with the volumes while running the containers:
+The volume management with Docker and MacOS is a little bit tricky, so here is a simple fix:
+Update the file `pdns-docker/prod/docker-compose.yml`, by replacing the volume path with `./` instead of `/`.
+
+In arango:
+```docker {filename="docker-compose.yml", linenos=table,linenostart=7}
+...
+    volumes:
+      - ./passivedns_arangodb:/var/lib/arangodb3
+...
+```
+And in Redis:
+```docker {filename="docker-compose.yml", linenos=table,linenostart=48}
+...
+    volumes:
+      - ./passivedns_redis_data:/data
+...
+```
 
 ## Create an admin user
 
@@ -87,7 +105,7 @@ Then, create a new admin user with:
 ```bash
 ../docker-entrypoint.sh create-user [USERNAME] [PASSWORD] [EMAIL] --admin
 ```
-Replacing `[USERNAME]`, `[PASSWORD]` and `[EMAIL]` with the corresponding data.
+Replacing `[USERNAME]`, `[PASSWORD]` and `[EMAIL]` with the corresponding data (note : not using the `--admin` option will create a simple user).
 
 ## Setup the scheduler
 

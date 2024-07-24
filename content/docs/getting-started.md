@@ -10,7 +10,7 @@ The passive DNS application will allow you to track your domain names. You will 
 
 You can also link some externs apis such as VirusTotal and AlienVault to retrieve the history of domain names and IPs.
 
-If a change is noticed by our application you will be notified by mail, or using redis, GCP or AWS pub/sub.
+If a change is noticed by our application you will be notified using redis pub/sub.
 
 You can also supervise your users thanks to a user creation authorization system.
 
