@@ -17,27 +17,36 @@ They can:
 ## Settings
 
 The settings page allows the administrator to manage the existing channels and create new ones.
-There are two types of channels :
-- The email channel requires an SMTP host, port, a sender email and a sender password.
-- The Redis channel requires a database number, a host, port, a queue name and a password (optional).
+The channels used are using Redis, and require a name, a database number, a host (default redis) and a port (default 6379).
 
 ## Users
 
 The users page allows the administrator to:
 - Remove existing users,
 - Create or edit a scheduler,
-- Send an invitation for a new user,
-- Manage requests from users.
+- Create a new user
 
-## Create a new administrator or user
+## Create a new administrator using CLI 
 
 If there is a need for multiple administrators, a new administrator can be created using the shell inside the API container (see the [production installation](../../installation/production/#create-an-admin-user) for more details) using the following command:
 
 ```bash
-../docker-entrypoint.sh create-user [USERNAME] [PASSWORD] [EMAIL] --admin
+../docker-entrypoint.sh create-user [USERNAME] [PASSWORD] --admin
 ```
-Replacing `[USERNAME]`, `[PASSWORD]` and `[EMAIL]` with the corresponding data.
-Removing the `--admin` option will create a simple user.
+Replacing `[USERNAME]` and `[PASSWORD]` with the corresponding data.
+Removing the `--admin` option will create a simple user, and adding `--scheduler` will create a new scheduler.
+
+There are also two other commands that can be used in the CLI:
+
+```bash
+../docker-entrypoint.sh delete-user [USERNAME]
+```
+Will remove a user, no matter their role (admin, scheduler or user).
+
+```bash
+../docker-entrypoint.sh reset-password [USERNAME] [NEW_PASSWORD]
+```
+Will change the password of a user.
 
 ## Add a new extern API
 
@@ -96,8 +105,6 @@ Then, you need to add the formatting function for you new API, at the end of the
         ...
 
         return out
-
-
 ...
 ```
 {{< callout type="info" >}}

@@ -119,8 +119,8 @@ By default, the database is not initialized. You **need** to create an admin use
 Either by Docker Desktop or by CLI, in a shell of the API container (separate from the one you are running the app with) :
 
 ```bash
-../docker-entrypoint.sh create-user [USERNAME] [PASSWORD] [EMAIL] --admin
+../docker-entrypoint.sh create-user [USERNAME] [PASSWORD] --admin
 
 ```
 
-Replacing `[USERNAME]`, `[PASSWORD]` and `[EMAIL]` with the corresponding data (note : not using the `--admin` option will create a simple user).
+Replacing `[USERNAME]` and `[PASSWORD]` with the corresponding data.

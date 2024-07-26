@@ -22,11 +22,10 @@ It is initialized when creating an admin user when the app is started for the fi
 ```json
 {
     "_key": "username",
-    "email": "str",
     "hashed_password": "str",
-    "role": "User|Admin|Scheduler",
+    "role": "user|admin|scheduler",
     "api_keys": {
-        "api_name":"str",
+        "api_name":"key",
         "..."
     }
 }
@@ -55,20 +54,6 @@ It is initialized when creating an admin user when the app is started for the fi
         "host": "str",
         "port": "str",
         "db": "str"
-    },
-}
-
-```
-OR
-```json
-{
-    "_key": "name",
-    "type": "email",
-    "infos": {
-        "smtp_host": "str",
-        "smtp_port": "str",
-        "sender_email": "str",
-        "sender_password": "str"
     },
 }
 
@@ -102,27 +87,6 @@ OR
 ```json
 {
     "_key": "name",
-}
-
-```
-
-#### UserRequest
-
-```json
-{
-    "_key": "email",
-    "requested-at": "datetime",
-}
-
-```
-
-#### UserPending
-
-```json
-{
-    "_key": "token",
-    "email": "str",
-    "invited_at": "datetime",
 }
 
 ```

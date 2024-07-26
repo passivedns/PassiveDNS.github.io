@@ -9,20 +9,7 @@ The user is the most classic role, that allows to access every functionality des
 
 ## New user
 
-If you do not have a user account, you can request an account with 2 options :
-
-{{% steps %}}
-
-### Request using the web app
-- On the login page, click "Request access" and enter your email address to send a link to the administrators
-- The administrator have to review your request and accept it
-- Using the token you recieved by email, you can then create your account using "Register"
-
-### From an administrator
-- Contact an Administrator so that they invite you using your email address
-- Using the token you recieved by email, you can then create your account using "Register"
-
-{{% /steps %}}
+If you do not have a user account, you need to ask the administrator to create one for you. They will then give you a username and a password that you can change in the settings once logged in.
 
 
 ## User interface
@@ -34,7 +21,23 @@ Once a user is logged in, the home page looks like this :
 From there, a user can :
 - View details of the existing domain names
 - Add a new domain name
+- Import a list of domains using a file
 - Filter the domain names and export in json or csv
+
+## Domain names
+
+If a domain name fails to be created, it may have been created by another user. Filtering the domain names with `no ownership filter` will display the domains that are not owned or followed by the user. It is then possible to follow them by clicking the heart shaped button.
+
+## Import from file
+
+It is possible to import a list of domain names from a file rather than adding them one by one.
+The file must be `.csv` or `.txt`, and there must be one domain per line.
+For example:
+``` {filename="domains.csv"}
+example.com
+github.com
+dns.google.com
+```
 
 ## Alerts
 
